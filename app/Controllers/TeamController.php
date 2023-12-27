@@ -8,6 +8,8 @@ class TeamController extends Controller
 {
     public function index():void{
         // TODO: Implement create() method.
+        echo "ok";
+
         //$this->render("views","home","liste des equipes");
 
     }

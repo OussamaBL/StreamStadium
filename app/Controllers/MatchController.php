@@ -7,15 +7,13 @@ use MVC\Controllers\Controller;
 class MatchController extends Controller
 {
 
-    function index(): void
+    public function index(): void
     {
         // TODO: Implement index() method.
     }
     public function details_match():void{
-        echo "hello";
-        //$this->render("views","details_match","Details de matche");
+        $this->render("views","details_match","Details de matche");
     }
-
     function create(): void
     {
         // TODO: Implement create() method.
