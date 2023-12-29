@@ -19,9 +19,7 @@
                         </ul>
                     </div>
                     <div class="content-container__sub-container__content">
-                        <h6 class="sub-container__content__title">Partner with us
-                            
-                        </h6>
+                        <h6 class="sub-container__content__title">Partner with us</h6>
                         <ul class="sub-container__content__values">
                             <li>Download</li>
                             <li>Help Center</li>
