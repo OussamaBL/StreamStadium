@@ -4,25 +4,29 @@ namespace MVC\Controllers;
 use MVC\Controllers\Controller;
 class HomeController extends Controller
 {
-    public function index():void{
-        echo "ok";
+    public function index(): void
+    {
+        $this->render("views","Home","Home");
+        // TODO: Implement index() method.
     }
-    public function contact():void{
-        $this->render("views","contact","Contact");
-    }
-
-    function create(): void
+    public function create(): void
     {
         // TODO: Implement create() method.
     }
 
-    function destroy(int $id): void
+    public function destroy(int $id): void
     {
-        // TODO: Implement destroy() method.
+        // todo: implement destroy() method.
     }
 
-    function update(int $id): void
+    public function update(int $id): void
     {
         // TODO: Implement update() method.
     }
+    public function about(): void
+    {
+        // TODO: Implement login() method.
+        $this->render("views","about","About us");
+    }
+
 }

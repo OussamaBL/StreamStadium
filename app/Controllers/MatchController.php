@@ -31,4 +31,10 @@ class MatchController extends Controller
     {
         // TODO: Implement update() method.
     }
+
+    function match(): void
+    {
+        // TODO: Implement login() method.
+        $this->render("views","match","Match");
+    }
 }
