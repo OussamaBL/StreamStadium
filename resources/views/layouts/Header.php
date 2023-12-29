@@ -1,7 +1,7 @@
 <header>
         <nav class="nav">
             <div class="logo-container">
-                <img class="logo__img" src="../../../public/svgs/brand-logo.svg" alt="StadiumStream logo">
+                <img class="logo__img" src="../public/svgs/brand-logo.svg" alt="StadiumStream logo">
                 <p class="logo__label">StadiumStream</p>
             </div>
             <div class="nav__links">

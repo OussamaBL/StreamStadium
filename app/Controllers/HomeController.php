@@ -7,6 +7,8 @@ class HomeController extends Controller
 
     public function index(): void
     {
+        $this->render("views","Home","Home");  
+
         // TODO: Implement index() method.
     }
     function create(): void
