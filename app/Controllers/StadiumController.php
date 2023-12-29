@@ -12,6 +12,10 @@ class StadiumController extends Controller
         // TODO: Implement index() method.
     }
 
+    public function details_stad():void{
+        $this->render("views","stadium","Details de stade");
+    }
+
     function create(): void
     {
         // TODO: Implement create() method.

@@ -14,6 +14,9 @@ class MatchController extends Controller
     public function details_match():void{
         $this->render("views","details_match","Details de matche");
     }
+    public function reservation():void{
+        $this->render("views","reservation","Match reservation");
+    }
     function create(): void
     {
         // TODO: Implement create() method.
