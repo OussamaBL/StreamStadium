@@ -27,4 +27,20 @@ class AuthController extends Controller
     {
         // TODO: Implement update() method.
     }
+
+    function sign_in(): void
+    {
+        // TODO: Implement login() method.
+        $this->render("views","sign_in","Sign in");
+    }
+    function register(): void
+    {
+        // TODO: Implement login() method.
+        $this->render("views","register","Register");
+    }
+    function profile(): void
+    {
+        // TODO: Implement login() method.
+        $this->render("views","profile","Profile");
+    }
 }
