@@ -8,7 +8,8 @@
     <title><?= $title ?></title>
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/reservation.css">
-    <link rel="stylesheet" href="../public/css/header_footer.css">
+    <link rel="stylesheet" href="../public/css/styles_footer.css">
+    <link rel="stylesheet" href="../public/css/styles_header.css">
 </head>
 <body>
 
