@@ -32,6 +32,18 @@ abstract class Crud implements CrudInterface
 
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
+    public function select_auth(string $email,string $cin=null)
+    {
+        $sql = "select * from users where email = ?";
+        if($cin!=null) $sql.=" and cin = ?";
+        $stmt = connexion::$pdo->prepare($sql);
+        if($cin!=null) $stmt->execute([$email,$cin]);
+        else $stmt->execute([$email]);
+
+        return $stmt->rowCount() > 0 ? $stmt->fetch(PDO::FETCH_OBJ) : null;
+
+    }
+
 
     public function selectAll(string $table):array
     {
@@ -60,5 +72,19 @@ abstract class Crud implements CrudInterface
         $stmt->execute([$id]);
 
         return $stmt->rowCount();
+    }
+    public function delete_verification(string $email):int
+    {
+        $sql = "DELETE FROM verification WHERE email = ?";
+        $stmt = connexion::$pdo->prepare($sql);
+        $stmt->execute([$email]);
+
+        return $stmt->rowCount();
+    }
+    public function select_token_verify($token,$expires): ?object{
+        $sql = "select * from verification where token= ? and expires >= ? ";
+        $stmt = connexion::$pdo->prepare($sql);
+        $stmt->execute([$token,$expires]);
+        return $stmt->rowCount() > 0 ? $stmt->fetch(PDO::FETCH_OBJ) : null;
     }
 }

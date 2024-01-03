@@ -25,13 +25,11 @@
         <link href="../public/css/bootstrap_home.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="../public/css/styles_footer.css">
-    <link rel="stylesheet" href="../public/css/styles_header.css">
-        
-
-
+        <link rel="stylesheet" href="../public/css/styles_header.css">
         <!-- Template Stylesheet -->
         <link href="../public/css/home.css" rel="stylesheet">
-    <title>Home</title>
+
+        <title><?= $title ?></title>
 </head>
 
 <body>
@@ -42,7 +40,7 @@
         <section class="hero-section d-flex flex-column align-items-center  " id="hero-section" >
             <img class="w-100" src="../public/images/img_home/lib/lightbox/images/3hero.png" alt="backgraound-hero" >
             
-            <div class="input-group"      id="hero-field" >
+            <div class="input-group" id="hero-field" >
                 <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons">
                 <button class="btn btn-warning bg-warning"  id="btn-search" type="button"><i class="bi bi-search"></i></button>
                 <button class="btn btn-success bg-success " id="btn-search" type="button"><i class="bi bi-calendar3"></i></button> 
@@ -488,6 +486,7 @@
     <script src="https://kit.fontawesome.com/ad5ea8d639.js" crossorigin="anonymous"></script>
     <script src="../public/js/lib/lightbox/js/lightbox.min.js"></script>
     <script src="../public/js/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../public/js/sandbox.js"></script>
 
     <!-- Template Javascript -->
     <script src="../public/js/home.js"></script>
