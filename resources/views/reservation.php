@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?= URL_DIR ?>public/css/reservation.css">
     <link rel="stylesheet" href="<?= URL_DIR ?>public/css/styles_header.css">
     <link rel="stylesheet" href="<?= URL_DIR ?>public/css/styles_footer.css">
+
 </head>
 <body>
 

@@ -17,6 +17,7 @@ class Route
     {
         $uri= $_SERVER['REQUEST_URI'] ?? '';
         $uri = explode('/', trim(strtolower($uri), '/'));
+
         if (!empty($uri[1])) {
             //exm ==> $uri[1]=Home and controller ===> homeController pour send lien in controller
             $controller = $uri[1] . 'controller';

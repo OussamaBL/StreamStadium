@@ -22,24 +22,23 @@ class HomeController extends Controller
         $team=new Team();
         $teams =$team->showall();
         $this->render("views","Home","Home",$matchs,$stades,$teams);  
-
         // TODO: Implement index() method.
     }
-    function create(): void
+    public function create(): void
     {
         // TODO: Implement create() method.
     }
 
-    function destroy(int $id): void
+    public function destroy(int $id): void
     {
-        // TODO: Implement destroy() method.
+        // todo: implement destroy() method.
     }
 
-    function update(int $id): void
+    public function update(int $id): void
     {
         // TODO: Implement update() method.
     }
-    function about(): void
+    public function about(): void
     {
         // TODO: Implement login() method.
         $this->render("views","about","About us");
