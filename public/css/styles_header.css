@@ -1,6 +1,10 @@
-@import url("../fonts/Font\ robotto/Roboto-Regular.ttf");
-@import url("../fonts/Noto\ sans/NotoSans-SemiBoldItalic.ttf");
+@import url("./fonts/Font\ robotto/Roboto-Regular.ttf");
+@import url("./fonts/Noto\ sans/NotoSans-SemiBoldItalic.ttf");
 
+header {
+    position: fixed !important;
+    z-index: 999;
+}
 * {
     padding: 0px;
     margin: 0px;
@@ -165,6 +169,12 @@ margin-bottom: 1rem;
     cursor: pointer;
 }
 
+
+
+.contact {
+    padding-top: 10rem;
+}
+
 @media (max-width: 980px) {
     .nav__actions {
         display: none;
@@ -176,8 +186,6 @@ margin-bottom: 1rem;
         display: flex;
     }
 }
-
-
 
 
 

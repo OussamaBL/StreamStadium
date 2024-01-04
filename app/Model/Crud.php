@@ -80,7 +80,7 @@ abstract class Crud implements CrudInterface
         $stmt->execute(); 
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
-    public function select_matchs(int $id):array
+    public function select_matchs(int $id):object
     {
         $sql = "SELECT matchs.*, 
         team1.name AS team1_name,   
@@ -106,7 +106,7 @@ abstract class Crud implements CrudInterface
         WHERE matchs.id = $id";
          $stmt = connexion::$pdo->prepare($sql);
         $stmt->execute(); 
-        return $stmt->fetchAll(PDO::FETCH_OBJ);
+        return $stmt->fetch(PDO::FETCH_OBJ);
     }
     public function select_stades(int $id):array
     {
