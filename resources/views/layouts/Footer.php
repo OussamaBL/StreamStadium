@@ -55,9 +55,9 @@
         </div>
         <div class="footer__signature">
             <div class="sub-container__socials-container">
-                <img class="socials-container__svg" src="../public/svgs/facebook-icon.svg" alt="facebook">
-                <img class="socials-container__svg" src="../public/svgs/twitter-icon.svg" alt="twitter">
-                <img class="socials-container__svg" src="../public/svgs/instagram-icon.svg" alt="instagram">
+                <img class="socials-container__svg" src="<?= URL_DIR ?>public/svgs/facebook-icon.svg" alt="facebook">
+                <img class="socials-container__svg" src="<?= URL_DIR ?>public/svgs/twitter-icon.svg" alt="twitter">
+                <img class="socials-container__svg" src="<?= URL_DIR ?>public/svgs/instagram-icon.svg" alt="instagram">
             </div>
             <div>
                 <p>

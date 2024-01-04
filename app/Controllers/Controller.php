@@ -15,5 +15,11 @@ abstract class Controller
         //include '../app/View/include/layout.php';
 
     }
-
+    public function validation_input(string $data):string {
+        $data = trim($data);
+        $data = stripslashes($data);
+        /** @var TYPE_NAME $data */
+        $data = htmlspecialchars($data);
+        return $data;
+    }
 }
