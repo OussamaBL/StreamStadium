@@ -14,10 +14,11 @@
 <body>
 
 <?php include "layouts/Header.php"; ?>
+<?php var_dump($result) ?>
 
 <div class="container-fluid">
      <div class="row">
-        <img src="<?= URL_DIR ?>public/images/img_home/lib/lightbox/images/<?php  echo  $result[0]->image  ?>" class="img_match" alt="image_match">
+        <img src="<?= URL_DIR ?>public/images/img_home/lib/lightbox/images/<?php  echo  $result->image  ?>" class="img_match" alt="image_match">
     </div>
     <div class="row pt-5">
         <div class="col-md-6 text-center">
@@ -25,12 +26,12 @@
         </div>
         <div class="col-md-6 ps-5">
             <div>
-                <h1><?php  echo $result[0]->team2_name . "  vs  " . $result[0]->team1_name ?>  </h1>
+                <h1><?php  echo $result->team2_name . "  vs  " . $result->team1_name ?>  </h1>
                 <p class="match_stad_date">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> <?= $result[0]->stade_name ?>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> <?= $result->stade_name ?>
                 </p>
                 <p class="match_stad_date">
-                    <i class="fa fa-calendar" aria-hidden="true"></i><?= $result[0]->date_hour  ?>
+                    <i class="fa fa-calendar" aria-hidden="true"></i><?= $result->date_hour  ?>
                 </p>
             </div>
             <div>
@@ -94,24 +95,24 @@
         <div class="row mt-5">
 
             <div class="col-md-4">
-                <img src="<?= URL_DIR ?>public/images/img_home/lib/lightbox/images/<?= $result[0]->team2_image  ?>" class="">
-                <h3 class="text-center mt-3"><?= $result[0]->team2_name ?></h3>
+                <img src="<?= URL_DIR ?>public/images/img_home/lib/lightbox/images/<?= $result->team2_image  ?>" class="">
+                <h3 class="text-center mt-3"><?= $result->team2_name ?></h3>
             </div>
             <div class="col-md-4 text-center my-auto">
                 <div>
                     <p class="match_stad_date">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i><?= $result[0]->stade_name ?>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i><?= $result->stade_name ?>
                     </p>
                     <h1>VS</h1>
                     <p class="match_stad_date">
-                        <i class="fa fa-calendar" aria-hidden="true"></i><?= $result[0]->date_hour  ?>
+                        <i class="fa fa-calendar" aria-hidden="true"></i><?= $result->date_hour  ?>
                     </p>
                 </div>
             </div>
             <div class="col-md-4">
-            <img src="http://localhost/streamstadium/public/images/img_home/lib/lightbox/images/<?= $result[0]->team1_image  ?>" class="" style="
+            <img src="http://localhost/streamstadium/public/images/img_home/lib/lightbox/images/<?= $result->team1_image  ?>" class="" style="
     margin-left: 23px;
-">                <h3 class="text-center mt-3"><?= $result[0]->team1_name ?></h3>
+">                <h3 class="text-center mt-3"><?= $result->team1_name ?></h3>
             </div>
         </div>
     </div>
