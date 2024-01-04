@@ -6,29 +6,38 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= $title ?></title>
-    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/details_match.css">
-    <link rel="stylesheet" href="../public/css/header_footer.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/css/register.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/css/details_match.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/css/styles_header.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/css/styles_footer.css">
 </head>
 <body>
 
 <?php include "layouts/Header.php"; ?>
 
+
 <section class="container-fluid">
     <div class="row">
-        <img src="../public/images/match.png" class="img_match" alt="image_match">
-    </div>
+  
+ 
+    <img src="<?= URL_DIR ?>public/images/img_home/lib/lightbox/images/<?php  echo  $result[0]->image  ?>" class="img_match" alt="image_match" style="width:850px; height:400px; margin:auto;"  >
+ 
+   
+    
+    </div> 
     <div class="row mt-3">
         <div class="col-md-6 ps-5">
             <div class="ms-5">
-                <h1>Morocco vs Canada</h1>
-                <p class="match_stad_date">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> Al Thumama Stadium
+                
+                <h1><?php  echo $result[0]->team2_name . "  vs  " . $result[0]->team1_name ?>  </h1>
+                    <p class="match_stad_date">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i> <?= $result[0]->stade_name ?>
                 </p>
                 <p class="match_stad_date">
-                    <i class="fa fa-calendar" aria-hidden="true"></i> December 01, 2022 · 20.00
+                    <i class="fa fa-calendar" aria-hidden="true"></i> <?= $result[0]->date_hour  ?>
                 </p>
-                <h5>Group : B</h5>
+            
             </div>
 
         </div>
@@ -36,8 +45,8 @@
             <div class="mx-auto box_reserver">
                 <div class="p-3">
                     <span>Tickets reserved</span> <br>
-                    <strong>10 000</strong><br> <br>
-                    <a href="#" class="btn btn-success">Reserve your E-tickets</a>
+                    <strong> <?= $result[0]->stade_capacity ?>  </strong><br> <br>
+                    <a href="/StreamStadium/match/reservation/<?= $id = $result[0]->id ?>" class="btn btn-success">Reserve your E-tickets</a>
                 </div>
             </div>
         </div>
@@ -46,34 +55,60 @@
         <div class="row">
             <h2 class="mb-5 text-center">Match informations</h2>
             <div class="col-md-6 ps-5 mb-5">
-                <h3>Morocco</h3>
-                <p>Lorem ipsum dolor sit amet consectetur. Vel volutpat in risus leo erat. Morbi morbi nec urna tellus. Posuere nibh cum commodo quam gravida rhoncus. Tellus sem interdum hendrerit imperdiet maecenas nulla placerat risus. Lectus nullam parturient turpis eget aliquet porttitor lacus senectus massa. Dui nunc semper eget rhoncus. Vel sed dolor et amet tellus eget.</p>
+                <h3><?= $result[0]->team2_name ?></h3>
+                <p><?= $result[0]->team2_description  ?></p>
                 <div class="ps-4">
-                    <p><strong>Coach : </strong><span>Lorem</span></p>
-                    <p><strong>Federation : </strong><span>Lorem</span></p>
+                    <p><strong>Coach : </strong><span><?= $result[0]->team2_coach  ?></span></p>
+                    <p><strong>Federation : </strong><span><?= $result[0]->team2_federation  ?></span></p>
                     <p>
                         <strong>Cups : </strong>
-                        <img class="img_cups" src="../public/images/cup.png" alt="Cups">
+                        <?php
+                        $i = 1;
+                        $n_cups =  $result[0]->team2_cups;
+                        if(  $n_cups == 0 ){
+                            echo 0;
+                           }
+                         while($i <= $n_cups ):?>
+
+                        <img class="img_cups" src="<?= URL_DIR ?>public/images/cup.png" alt="Cups">
+                        
+                        <?php 
+                        $i ++;
+                     endwhile; ?> 
                     </p>
                 </div>
             </div>
             <div class="col-md-6 text-center">
-                <img src="../public/images/morocco.png">
+                <img src="<?= URL_DIR ?>public/images/img_home/lib/lightbox/images/<?= $result[0]->team2_image  ?>">
             </div>
             <div class="col-md-6 ps-5">
-                <h3>Morocco</h3>
-                <p>Lorem ipsum dolor sit amet consectetur. Vel volutpat in risus leo erat. Morbi morbi nec urna tellus. Posuere nibh cum commodo quam gravida rhoncus. Tellus sem interdum hendrerit imperdiet maecenas nulla placerat risus. Lectus nullam parturient turpis eget aliquet porttitor lacus senectus massa. Dui nunc semper eget rhoncus. Vel sed dolor et amet tellus eget.</p>
+                <h3><?= $result[0]->team1_name ?></h3>
+                <p><?= $result[0]->team1_description  ?></p>
                 <div class="ps-4">
-                    <p><strong>Coach : </strong><span>Lorem</span></p>
-                    <p><strong>Federation : </strong><span>Lorem</span></p>
+                    <p><strong>Coach : </strong><span><?= $result[0]->team1_coach  ?></span></p>
+                    <p><strong>Federation : </strong><span><?= $result[0]->team1_federation  ?></span></p>
                     <p>
                         <strong>Cups : </strong>
-                        <img class="img_cups" src="../public/images/cup.png" alt="Cups">
+                        <?php
+                        
+                        $i = 1;
+                        $n_cups =  $result[0]->team1_cups;
+                        if(  $n_cups == 0 ){
+                         echo 0;
+                        }
+                         while($i <= $n_cups ):?>
+
+                        <img class="img_cups" src="<?= URL_DIR ?>public/images/cup.png" alt="Cups">
+                        
+                        <?php 
+                        $i ++;
+                     endwhile;
+                      ?> 
                     </p>
                 </div>
             </div>
             <div class="col-md-6 text-center">
-                <img src="../public/images/morocco.png">
+                <img src="<?= URL_DIR ?>public/images/img_home/lib/lightbox/images/<?= $result[0]->team1_image  ?>">
             </div>
         </div>
     </div>
@@ -85,7 +120,7 @@
         <div class="col-md-3 mb-3">
             <div class="card">
                 <a href="#">
-                    <img src="../public/images/match.png" width="100%" height="180px">
+                    <img src="<?= URL_DIR ?>public/images/match.png" width="100%" height="180px">
                 </a>
                 <div class="card_match">
                     <div class="my-auto mx-auto" style="flex-basis: 15%">
@@ -103,7 +138,7 @@
         <div class="col-md-3 mb-3">
             <div class="card">
                 <a href="#">
-                    <img src="../public/images/match.png" width="100%" height="180px">
+                    <img src="<?= URL_DIR ?>public/images/match.png" width="100%" height="180px">
                 </a>
                 <div class="card_match">
                     <div class="my-auto mx-auto" style="flex-basis: 15%">
@@ -121,7 +156,7 @@
         <div class="col-md-3 mb-3">
             <div class="card">
                 <a href="#">
-                    <img src="../public/images/match.png" width="100%" height="180px">
+                    <img src="<?= URL_DIR ?>public/images/match.png" width="100%" height="180px">
                 </a>
                 <div class="card_match">
                     <div class="my-auto mx-auto" style="flex-basis: 15%">
@@ -139,7 +174,7 @@
         <div class="col-md-3 mb-3">
             <div class="card">
                 <a href="#">
-                    <img src="../public/images/match.png" width="100%" height="180px">
+                    <img src="<?= URL_DIR ?>public/images/match.png" width="100%" height="180px">
                 </a>
                 <div class="card_match">
                     <div class="my-auto mx-auto" style="flex-basis: 15%">
@@ -157,7 +192,7 @@
         <div class="col-md-3 mb-3">
             <div class="card">
                 <a href="#">
-                    <img src="../public/images/match.png" width="100%" height="180px">
+                    <img src="<?= URL_DIR ?>public/images/match.png" width="100%" height="180px">
                 </a>
                 <div class="card_match">
                     <div class="my-auto mx-auto" style="flex-basis: 15%">
@@ -177,7 +212,7 @@
 
 <?php include "layouts/Footer.php" ?>
 
-<script src="../public/js/bootstrap.bundle.min.js"></script>
+<script src="<?= URL_DIR ?>public/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/ad5ea8d639.js" crossorigin="anonymous"></script>
 </body>
 </html>

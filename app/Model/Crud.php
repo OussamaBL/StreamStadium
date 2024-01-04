@@ -73,6 +73,49 @@ abstract class Crud implements CrudInterface
 
         return $stmt->rowCount();
     }
+    public function selectAll_matchs():array
+    {
+        $sql = "SELECT matchs.*, team1.name AS team1_name,   team2.name AS team2_name, stades.name AS stade_name FROM matchs  JOIN   teams AS team1 ON matchs.id_team1 = team1.id  JOIN        teams AS team2 ON matchs.id_team2 = team2.id JOIN   stades ON matchs.id_stad = stades.id";
+        $stmt = connexion::$pdo->prepare($sql);
+        $stmt->execute(); 
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+    public function select_matchs(int $id):array
+    {
+        $sql = "SELECT matchs.*, 
+        team1.name AS team1_name,   
+        team2.name AS team2_name, 
+        team1.coach AS team1_coach, 
+        team2.coach AS team2_coach, 
+        team1.image AS team1_image, 
+        team2.image AS team2_image, 
+        team1.description AS team1_description, 
+        team2.description AS team2_description, 
+        team1.federation AS team1_federation, 
+        team2.federation AS team2_federation, 
+        team1.cups AS team1_cups, 
+        team2.cups AS team2_cups,
+        team1.groupe AS team1_groupe, 
+        team2.groupe AS team2_groupe,
+        stades.name AS stade_name,  
+        stades.capacity AS stade_capacity  
+        FROM matchs  
+        JOIN teams AS team1 ON matchs.id_team1 = team1.id  
+        JOIN teams AS team2 ON matchs.id_team2 = team2.id 
+        JOIN stades ON matchs.id_stad = stades.id            
+        WHERE matchs.id = $id";
+         $stmt = connexion::$pdo->prepare($sql);
+        $stmt->execute(); 
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+    public function select_stades(int $id):array
+    {
+        $sql = "SELECT * FROM stades WHERE id = $id";
+        $stmt = connexion::$pdo->prepare($sql);
+        $stmt->execute(); 
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+ 
     public function delete_verification(string $email):int
     {
         $sql = "DELETE FROM verification WHERE email = ?";
@@ -87,4 +130,5 @@ abstract class Crud implements CrudInterface
         $stmt->execute([$token,$expires]);
         return $stmt->rowCount() > 0 ? $stmt->fetch(PDO::FETCH_OBJ) : null;
     }
+
 }

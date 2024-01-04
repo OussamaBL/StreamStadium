@@ -70,8 +70,8 @@ class Team extends CrudAlias
         $this->name=$team->name;
         $this->cups=$team->cups;
     }
-    public function showAllTeams(): array
+    public function showall(): array
     {
-        return $this->selectAll('team');
+        return $this->selectAll('teams');
     }
 }
