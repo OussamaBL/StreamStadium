@@ -22,7 +22,9 @@
 <?php include "layouts/Header.php"; ?>
 
 <?php /** @var TYPE_NAME $result */
-if($teams!=null){ ?>
+
+if($data!=null){ ?>
+
     <div id="myModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -31,7 +33,8 @@ if($teams!=null){ ?>
 
             </div>
             <div class="modal-body">
-                <p><?= $teams ?></p>
+
+                <p><?= $data ?></p>
             </div>
         </div>
     </div>

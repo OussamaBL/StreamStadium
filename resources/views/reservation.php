@@ -22,74 +22,79 @@
         <img src="<?= URL_DIR ?>public/images/img_home/lib/lightbox/images/<?php  echo  $result->image  ?>" class="img_match" alt="image_match">
     </div>
     <div class="row pt-5">
-        <div class="col-md-6 text-center">
-            <img src="<?= URL_DIR ?>public/images/stade_ticket.png" class="img_stade_ticket">
-        </div>
-        <div class="col-md-6 ps-5">
-            <div>
-                <h1><?php  echo $result->team2_name . "  vs  " . $result->team1_name ?>  </h1>
-                <p class="match_stad_date">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> <?= $result->stade_name ?>
-                </p>
-                <p class="match_stad_date">
-                    <i class="fa fa-calendar" aria-hidden="true"></i><?= $result->date_hour  ?>
-                </p>
-            </div>
-            <div>
-                <div class="d-flex">
-                    <div class="color_category" style="background-color: rgb(133, 156, 219);"></div>
-                    <div> Category 3
-                        <span class="price_ticket">30$</span>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div class="color_category" style="background-color: rgb(114, 21, 197);"></div>
-                    <div> Category 2
-                        <span class="price_ticket">40$</span>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div class="color_category" style="background-color: rgb(210, 66, 13);"></div>
-                    <div> Category 1
-                        <span class="price_ticket">50$</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="d-flex mt-3" style="gap: 55px">
-                <div class="text-center">
-                    <strong>Category 3</strong>
-                    <span class="input-wrapper tickets_qte mt-2">
-                      <button class="decrement" id="decrement">-</button>
-                      <input type="number" class="quantity" value="0" name="catg3_price" id="quantity qte_ticket_catg3" />
-                      <button class="increment" id="increment">+</button>
-                    </span>
-                </div>
-                <div class="text-center">
-                    <strong>Category 2</strong>
-                    <span class="input-wrapper tickets_qte mt-2">
-                      <button class="decrement" id="decrement">-</button>
-                      <input type="number" class="quantity" value="0" name="catg2_price" id="quantity qte_ticket_catg2" />
-                      <button class="increment" id="increment">+</button>
-                    </span>
-                </div>
-                <div class="text-center">
-                    <strong>Category 1</strong>
-                    <span class="input-wrapper tickets_qte mt-2">
-                      <button class="decrement" id="decrement">-</button>
-                      <input type="number" class="quantity" value="0" name="catg1_price" id="quantity qte_ticket_catg1" />
-                      <button class="increment" id="increment">+</button>
-                    </span>
-                </div>
-            </div>
-            <div class="mt-4">
-                <h4>Total Price : <span id="price_total">0$</span></h4>
-            </div>
-        </div>
-        <div class="text-center mt-4">
-            <button class="btn btn-success" style="width: 200px">Reserver</button>
-        </div>
+        <form action="/streamstadium/Reservation/book/<?= $result->id; ?>" class="row" method="POST">
+            <div class="col-md-6 text-center">
+                <img src="<?= URL_DIR ?>public/images/stade_ticket.png" class="img_stade_ticket">
 
+            </div>
+            <div class="col-md-6 ps-5">
+
+                    <div>
+                        <h1><?php  echo $result->team2_name . "  vs  " . $result->team1_name ?>  </h1>
+                        <p class="match_stad_date">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> <?= $result->stade_name ?>
+                        </p>
+                        <p class="match_stad_date">
+                            <i class="fa fa-calendar" aria-hidden="true"></i><?= $result->date_hour  ?>
+                        </p>
+                    </div>
+                    <div>
+                        <div class="d-flex">
+                            <div class="color_category" style="background-color: rgb(133, 156, 219);"></div>
+                            <div> Category 3
+                                <span class="price_ticket">30$</span>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="color_category" style="background-color: rgb(114, 21, 197);"></div>
+                            <div> Category 2
+                                <span class="price_ticket">40$</span>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="color_category" style="background-color: rgb(210, 66, 13);"></div>
+                            <div> Category 1
+                                <span class="price_ticket">50$</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mt-3" style="gap: 55px">
+
+                        <div class="text-center">
+                            <strong>Category 3</strong>
+                            <span class="input-wrapper tickets_qte mt-2">
+                              <button type="button" class="decrement" id="decrement">-</button>
+                              <input type="number" class="quantity" value="0" name="qte_ticket_catg3" id="quantity qte_ticket_catg3" />
+                              <button type="button"  class="increment" id="increment">+</button>
+                            </span>
+                        </div>
+                        <div class="text-center">
+                            <strong>Category 2</strong>
+                            <span class="input-wrapper tickets_qte mt-2">
+                              <button type="button" class="decrement" id="decrement">-</button>
+                              <input type="number" class="quantity" value="0" name="qte_ticket_catg2" id="quantity qte_ticket_catg2" />
+                              <button type="button" class="increment" id="increment">+</button>
+                            </span>
+                        </div>
+                        <div class="text-center">
+                            <strong>Category 1</strong>
+                            <span class="input-wrapper tickets_qte mt-2">
+                              <button type="button" class="decrement" id="decrement">-</button>
+                              <input type="number" class="quantity" value="0" name="qte_ticket_catg1" id="quantity qte_ticket_catg1" />
+                              <button type="button" class="increment" id="increment">+</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4>Total Price : <span id="price_total">0$</span></h4>
+                    </div>
+                </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-success" type="submit" style="width: 200px">Reserver</button>
+            </div>
+        </form>
     </div>
     <div class="container mt-5">
         <h3 class="text-center">Match information</h3>

@@ -12,7 +12,6 @@ abstract class Controller
     public function render(string $nameFolder,string $nameFile,string $title,$result=null,$data=null,$teams=null):void{
 
         include "../resources/".$nameFolder."/".$nameFile.".php";
-        //include '../app/View/include/layout.php';
 
     }
     public function validation_input(string $data):string {

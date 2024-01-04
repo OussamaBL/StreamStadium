@@ -16,6 +16,7 @@ class MatchController extends Controller
         // TODO: Implement index() method.
     }
     public function details_match($id):void{
+        session_start();
         $match=new Matchs();
         $this->MatchID = $id;
         $match->setId($id);
@@ -23,7 +24,7 @@ class MatchController extends Controller
         $this->render("views","details_match","details_match",$matchs);
     }
     public function reservation($id):void{
-        
+        session_start();
         $match=new Matchs();
         $this->MatchID = $id;
         $match->setId($id);
@@ -46,7 +47,9 @@ class MatchController extends Controller
     }
 
     function match(): void
-    {   $match=new Matchs();
+    {
+        session_start();
+        $match=new Matchs();
         $matchs=$match->showall();
         // TODO: Implement login() method.
         $this->render("views","match","Match",$matchs);
