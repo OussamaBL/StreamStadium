@@ -21,7 +21,7 @@ class MatchController extends Controller
         $this->MatchID = $id;
         $match->setId($id);
         $matchs=$match->show(); 
-        $this->render("views","details_match","Details de matche",$matchs);
+        $this->render("views","details_match","details_match",$matchs);
     }
     public function reservation($id):void{
         session_start();

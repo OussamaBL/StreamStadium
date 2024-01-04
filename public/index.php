@@ -1,3 +1,3 @@
 <?php
-define('URL_DIR','http://localhost:8080/streamstadium/');
+define('URL_DIR','http://localhost/streamstadium/');
 require '../Routes/web.php';

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?= URL_DIR ?>public/css/details_match.css">
     <link rel="stylesheet" href="<?= URL_DIR ?>public/css/styles_header.css">
     <link rel="stylesheet" href="<?= URL_DIR ?>public/css/styles_footer.css">
+    
 </head>
 <body>
 

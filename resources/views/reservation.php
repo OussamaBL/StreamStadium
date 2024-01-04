@@ -15,15 +15,18 @@
 <body>
 
 <?php include "layouts/Header.php"; ?>
+<?php var_dump($result) ?>
 
 <div class="container-fluid">
      <div class="row">
         <img src="<?= URL_DIR ?>public/images/img_home/lib/lightbox/images/<?php  echo  $result->image  ?>" class="img_match" alt="image_match">
     </div>
     <div class="row pt-5">
+
         <form action="/streamstadium/Reservation/book/<?= $result->id; ?>" class="row" method="POST">
             <div class="col-md-6 text-center">
                 <img src="<?= URL_DIR ?>public/images/stade_ticket.png" class="img_stade_ticket">
+
             </div>
             <div class="col-md-6 ps-5">
 
