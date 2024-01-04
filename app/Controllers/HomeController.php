@@ -11,10 +11,8 @@ class HomeController extends Controller
 
     
     public function index(): void
-    {   
-        
-      
-    
+    {
+        session_start();
         $match=new Matchs();
         $matchs=$match->showall();
         $stade=new Stade();

@@ -92,6 +92,8 @@ class AuthController extends Controller
             }
         }
         $user->edit();
+        session_start();
+        $_SESSION["name"]=$_POST["full_name"];
         //header("Location: /streamstadium/Auth/profile/update_succes");
         header("Location: /streamstadium/Auth/profile");
         die;
