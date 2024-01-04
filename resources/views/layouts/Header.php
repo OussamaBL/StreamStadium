@@ -1,7 +1,7 @@
 <header>
         <nav class="nav">
             <div class="logo-container">
-                <img class="logo__img" src="../public/svgs/brand-logo.svg" alt="StadiumStream logo">
+                <img class="logo__img" src="<?=  URL_DIR ?>public/svgs/brand-logo.svg" alt="StadiumStream logo">
                 <p class="logo__label">StadiumStream</p>
             </div>
             <div class="nav__links">
@@ -27,7 +27,7 @@
         <nav class="side__nav side__nav--active">
             <div class="side_nav__header">
                 <div class="logo-container">
-                    <img class="logo__img" src="../../../public/svgs/brand-logo.svg" alt="StadiumStream logo">
+                    <img class="logo__img" src="<?=  URL_DIR ?>public/svgs/brand-logo.svg" alt="StadiumStream logo">
                     <p class="logo__label">StadiumStream</p>
                 </div>
                 <div class="nav__group__burger">

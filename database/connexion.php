@@ -9,7 +9,7 @@ class connexion
 {
     public static PDO|null $pdo = null;
     private string $ServerName="localhost";
-    private string $Name="mvc_proj";
+    private string $Name="streamstadium";
     private string $UserName="root";
     private string $password="";
 

@@ -2,12 +2,26 @@
 
 namespace MVC\Controllers;
 use MVC\Controllers\Controller;
+use MVC\Model\Matchs;
+use MVC\Model\stade as stade;
+use MVC\Model\Team as team;
+
 class HomeController extends Controller
 {
 
+    
     public function index(): void
-    {
-        $this->render("views","Home","Home");  
+    {   
+        
+      
+    
+        $match=new Matchs();
+        $matchs=$match->showall();
+        $stade=new Stade();
+        $stades =$stade->showall();
+        $team=new Team();
+        $teams =$team->showall();
+        $this->render("views","Home","Home",$matchs,$stades,$teams);  
 
         // TODO: Implement index() method.
     }

@@ -6,30 +6,31 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= $title ?></title>
-    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/reservation.css">
-    <link rel="stylesheet" href="../public/css/header_footer.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/css/reservation.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/css/styles_header.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/css/styles_footer.css">
 </head>
 <body>
 
 <?php include "layouts/Header.php"; ?>
 
 <div class="container-fluid">
-    <div class="row">
-        <img src="../public/images/match.png" class="img_match" alt="image_match">
+     <div class="row">
+        <img src="<?= URL_DIR ?>public/images/img_home/lib/lightbox/images/<?php  echo  $result[0]->image  ?>" class="img_match" alt="image_match">
     </div>
     <div class="row pt-5">
         <div class="col-md-6 text-center">
-            <img src="../public/images/stade_ticket.png" class="img_stade_ticket">
+            <img src="<?= URL_DIR ?>public/images/stade_ticket.png" class="img_stade_ticket">
         </div>
         <div class="col-md-6 ps-5">
             <div>
-                <h1>Morocco vs Canada</h1>
+                <h1><?php  echo $result[0]->team2_name . "  vs  " . $result[0]->team1_name ?>  </h1>
                 <p class="match_stad_date">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> Al Thumama Stadium
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> <?= $result[0]->stade_name ?>
                 </p>
                 <p class="match_stad_date">
-                    <i class="fa fa-calendar" aria-hidden="true"></i> December 01, 2022 · 20.00
+                    <i class="fa fa-calendar" aria-hidden="true"></i><?= $result[0]->date_hour  ?>
                 </p>
             </div>
             <div>
@@ -93,23 +94,24 @@
         <div class="row mt-5">
 
             <div class="col-md-4">
-                <img src="../public/images/morocco.png" class="">
-                <h3 class="text-center mt-3">Morocco</h3>
+                <img src="<?= URL_DIR ?>public/images/img_home/lib/lightbox/images/<?= $result[0]->team2_image  ?>" class="">
+                <h3 class="text-center mt-3"><?= $result[0]->team2_name ?></h3>
             </div>
             <div class="col-md-4 text-center my-auto">
                 <div>
                     <p class="match_stad_date">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i> Al Thumama Stadium
+                        <i class="fa fa-map-marker" aria-hidden="true"></i><?= $result[0]->stade_name ?>
                     </p>
                     <h1>VS</h1>
                     <p class="match_stad_date">
-                        <i class="fa fa-calendar" aria-hidden="true"></i> December 01, 2022 · 20.00
+                        <i class="fa fa-calendar" aria-hidden="true"></i><?= $result[0]->date_hour  ?>
                     </p>
                 </div>
             </div>
             <div class="col-md-4">
-                <img src="../public/images/morocco.png" class="">
-                <h3 class="text-center mt-3">Morocco</h3>
+            <img src="http://localhost/streamstadium/public/images/img_home/lib/lightbox/images/<?= $result[0]->team1_image  ?>" class="" style="
+    margin-left: 23px;
+">                <h3 class="text-center mt-3"><?= $result[0]->team1_name ?></h3>
             </div>
         </div>
     </div>
@@ -117,9 +119,9 @@
 
 <?php include "layouts/Footer.php" ?>
 
-<script src="../public/js/jquery-3.7.1.min.js"></script>
-<script src="../public/js/reservation.js"></script>
-<script src="../public/js/bootstrap.bundle.min.js"></script>
+<script src="<?= URL_DIR ?>public/js/jquery-3.7.1.min.js"></script>
+<script src="<?= URL_DIR ?>public/js/reservation.js"></script>
+<script src="<?= URL_DIR ?>public/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/ad5ea8d639.js" crossorigin="anonymous"></script>
 </body>
 </html>

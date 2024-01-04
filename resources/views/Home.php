@@ -17,8 +17,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
         <!-- Libraries Stylesheet -->
-        <link href="../public/js/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="../public/js/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+         <link href="../public/js/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
 
         <!-- Customized Bootstrap Stylesheet -->
@@ -30,7 +29,7 @@
 
 
         <!-- Template Stylesheet -->
-        <link href="../public/css/home.css" rel="stylesheet">
+        <link href="../public/css/style_home/home.css" rel="stylesheet">
     <title>Home</title>
 </head>
 
@@ -53,125 +52,29 @@
          <section class="frist-slider">
             <div class="d-flex justify-content-between mx-4" >
             <h2>Upcoming Matchs</h2>
-            <p>View All</p>
+            <a href="/StreamStadium/match/Match" >View All</a>
             </div> 
         <!-- match Shop Start tickets-->
             <div class="container-fluid vesitable py-5">
                 <div class="container py-5" style="margin-top: -80px;">
                
                     <div class="owl-carousel vegetable-carousel justify-content-center">
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="../public/images/img_home/lib/lightbox/images/equipe.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">nov 23</div>
-                            <div class="p-4 rounded-bottom">
-                                <h4>Morocco vs senegale</h4>
-                                <p><i class="fa-solid fa-location-dot"></i>Al Bayt Stadium</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add tickets</a>
+                        <?php foreach($result as $match){ ?>
+                            <div class="border border-primary rounded position-relative vesitable-item" style=" height: 382px;"  style=" whidth: 300px; height: 200px;" >
+                                <div class="vesitable-img">
+                                    <img src="../public/images/img_home/lib/lightbox/images/<?= $match->image  ?>" class="img-fluid w-100 rounded-top" alt="">
+                                </div>
+                                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;"><?= $match->date_hour  ?></div>
+                                <div class="p-4 rounded-bottom">
+                                    <h4><?= $match->team2_name ?> vs <?= $match->team1_name ?></h4>
+                                    <p><i class="fa-solid fa-location-dot">--</i><?= $match->stade_name ?></p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                         <a href="/StreamStadium/match/details_match/<?= $id = $match->id ?>  " class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add tickets</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="../public/images/img_home/lib/lightbox/images/equipe.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">nov 23</div>
-                            <div class="p-4 rounded-bottom">
-                                <h4>Morocco vs senegale</h4>
-                                   <p><i class="fa-solid fa-location-dot"></i>Al Bayt Stadium</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="../public/images/img_home/lib/lightbox/images/equipe.png" class="img-fluid w-100 rounded-top bg-light" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">nov 23</div>
-                            <div class="p-4 rounded-bottom">
-                                <h4>Morocco vs senegale</h4>
-                                   <p><i class="fa-solid fa-location-dot"></i>Al Bayt Stadium</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$50</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="../public/images/img_home/lib/lightbox/images/equipe.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">nov 23</div>
-                            <div class="p-4 rounded-bottom">
-                                <h4>Morocco vs senegale</h4>
-                                   <p><i class="fa-solid fa-location-dot"></i>Al Bayt Stadium</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$50</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="../public/images/img_home/lib/lightbox/images/equipe.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">nov 23</div>
-                            <div class="p-4 rounded-bottom">
-                                <h4>Morocco vs senegale</h4>
-                                   <p><i class="fa-solid fa-location-dot"></i>Al Bayt Stadium</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$50</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="../public/images/img_home/lib/lightbox/images/equipe.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">nov 23</div>
-                            <div class="p-4 rounded-bottom">
-                                <h4>Morocco vs senegale</h4>
-                                   <p><i class="fa-solid fa-location-dot"></i>Al Bayt Stadium</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$50</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="../public/images/img_home/lib/lightbox/images/equipe.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">nov 23</div>
-                            <div class="p-4 rounded-bottom">
-                                <h4>Morocco vs senegale</h4>
-                                   <p><i class="fa-solid fa-location-dot"></i>Al Bayt Stadium</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$50</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="../public/images/img_home/lib/lightbox/images/equipe.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">nov 23</div>
-                            <div class="p-4 rounded-bottom">
-                                <h4>Morocco vs senegale</h4>
-                                   <p><i class="fa-solid fa-location-dot"></i>Al Bayt Stadium</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$50</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add tickets</a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php } ?>
+                        
                     </div>
                 </div>
             </div>
@@ -224,90 +127,23 @@
                         <div class="container py-5" style="margin-top: -80px;">
                     
                             <div class="owl-carousel vegetable-carousel justify-content-center">
-                                <div class="border border-primary rounded position-relative vesitable-item">
+                            <?php foreach($data as $stade){ ?>
+                                <a href="/StreamStadium/stadium/details_stad/<?php echo $id = $stade->id ?>  " >
+                                <div class="border border-primary rounded position-relative vesitable-item"  style=" height: 412px;">
                                     <div class="vesitable-img">
-                                        <img src="../public/images/img_home/lib/lightbox/images/stadium1.png" class="img-fluid w-100 rounded-top" alt="">
+                                        <img src="../public/images/img_home/lib/lightbox/images/<?= $stade->image ?>" class="img-fluid w-100 rounded-top" alt="" style=" whidth: 300px; height: 200px;">
                                     </div>
                                     <div class="p-4 rounded-bottom">
-                                        <h4>Ahmad Bin Ali Stadium</h4>
-                                        <p><i class="fa-solid fa-location-dot"></i>Capacity: 40,000</p>
+                                        <h4><?= $stade->name ?></h4>
+                                        <p><i class="fa-solid fa-location-dot"></i>Capacity: <?= $stade->capacity ?></p>
                                         <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <p class="text-dark fs-5 fw-bold mb-0">Next to the Mall of Qatar</p>
+                                            <p class="text-dark fs-5 fw-bold mb-0"> <strong>city: </strong> <?= $stade->city ?></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="border border-primary rounded position-relative vesitable-item">
-                                    <div class="vesitable-img">
-                                        <img src="../public/images/img_home/lib/lightbox/images/stadium2.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="p-4 rounded-bottom">
-                                        <h4>Ahmad Bin Ali Stadium</h4>
-                                        <p><i class="fa-solid fa-location-dot"></i>Capacity: 40,000</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <p class="text-dark fs-5 fw-bold mb-0">Next to the Mall of Qatar</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="border border-primary rounded position-relative vesitable-item">
-                                    <div class="vesitable-img">
-                                        <img src="../public/images/img_home/lib/lightbox/images/stadium3jpg.jpg" class="img-fluid w-100 rounded-top bg-light" alt="">
-                                    </div>
-                                    <div class="p-4 rounded-bottom">
-                                        <h4>Ahmad Bin Ali Stadium</h4>
-                                        <p><i class="fa-solid fa-location-dot"></i>Capacity: 40,000</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <p class="text-dark fs-5 fw-bold mb-0">Next to the Mall of Qatar</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="border border-primary rounded position-relative vesitable-item">
-                                    <div class="vesitable-img">
-                                        <img src="../public/images/img_home/lib/lightbox/images/stadium4jpg.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="p-4 rounded-bottom">
-                                        <h4>Ahmad Bin Ali Stadium</h4>
-                                        <p><i class="fa-solid fa-location-dot"></i>Capacity: 40,000</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <p class="text-dark fs-5 fw-bold mb-0">Next to the Mall of Qatar</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="border border-primary rounded position-relative vesitable-item">
-                                    <div class="vesitable-img">
-                                        <img src="../public/images/img_home/lib/lightbox/images/stadium1.png" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="p-4 rounded-bottom">
-                                        <h4>Ahmad Bin Ali Stadium</h4>
-                                        <p><i class="fa-solid fa-location-dot"></i>Capacity: 40,000</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <p class="text-dark fs-5 fw-bold mb-0">Next to the Mall of Qatar</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="border border-primary rounded position-relative vesitable-item">
-                                    <div class="vesitable-img">
-                                        <img src="../public/images/img_home/lib/lightbox/images/stadium1.png" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="p-4 rounded-bottom">
-                                        <h4>Ahmad Bin Ali Stadium</h4>
-                                        <p><i class="fa-solid fa-location-dot"></i>Capacity: 40,000</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <p class="text-dark fs-5 fw-bold mb-0">Next to the Mall of Qatar</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="border border-primary rounded position-relative vesitable-item">
-                                    <div class="vesitable-img">
-                                        <img src="../public/images/img_home/lib/lightbox/images/stadium5jpg.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="p-4 rounded-bottom">
-                                        <h4>Ahmad Bin Ali Stadium</h4>
-                                        <p><i class="fa-solid fa-location-dot"></i>Capacity: 40,000</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <p class="text-dark fs-5 fw-bold mb-0">Next to the Mall of Qatar</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                </a>
+                                <?php }?>
+                        
                             
                             </div>
                         </div>
@@ -325,97 +161,21 @@
                             <div class="container py-5" style="margin-top: -80px;">
                         
                                 <div class="owl-carousel vegetable-carousel justify-content-center">
-                                    <div class="border border-primary rounded position-relative vesitable-item bg-white">
+                                <?php foreach($teams as $team){ ?>
+                                    <div class="border border-primary rounded position-relative vesitable-item bg-white" style=" height: 412px;">
                                         <div class="vesitable-img">
-                                            <img src="../public/images/img_home/lib/lightbox/images/Maroc.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            <img src="../public/images/img_home/lib/lightbox/images/<?= $team->image ?>" class="img-fluid w-100 rounded-top" alt=""  style=" whidth: 300px; height: 200px;">
                                         </div>
                                         <div class="p-4 rounded-bottom">
-                                            <h4>Morocco National Team</h4>
-                                            <p><i class="fas fa-user-circle">-</i>Walid Regragui</p>
+                                            <h4><?= $team->name ?></h4>
+                                            <p><i class="fas fa-user-circle">-</i><?= $team->coach ?></p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">Royal Moroccan Football Federation (FRMF)
-                    </p>
+                                                <p class="text-dark fs-5 fw-bold mb-0"></i><?= $team->federation ?></p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="border border-primary rounded position-relative vesitable-item bg-white">
-                                        <div class="vesitable-img">
-                                            <img src="../public/images/img_home/lib/lightbox/images/Algerie.png" class="img-fluid w-100 rounded-top" alt="">
-                                        </div>
-                                        <div class="p-4 rounded-bottom">
-                                            <h4>Morocco National Team</h4>
-                                            <p><i class="fas fa-user-circle">-</i>Walid Regragui</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">Royal Moroccan Football Federation (FRMF)
-                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border border-primary rounded position-relative vesitable-item bg-white">
-                                        <div class="vesitable-img">
-                                            <img src="../public/images/img_home/lib/lightbox/images/Angola.png" class="img-fluid w-100 rounded-top bg-light" alt="">
-                                        </div>
-                                        <div class="p-4 rounded-bottom">
-                                            <h4>Morocco National Team</h4>
-                                            <p><i class="fas fa-user-circle">-</i>Walid Regragui</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">Royal Moroccan Football Federation (FRMF)
-                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border border-primary rounded position-relative vesitable-item bg-white">
-                                        <div class="vesitable-img">
-                                            <img src="../public/images/img_home/lib/lightbox/images/Burki-nafaso28.png" class="img-fluid w-100 rounded-top" alt="">
-                                        </div>
-                                        <div class="p-4 rounded-bottom">
-                                            <h4>Morocco National Team</h4>
-                                            <p><i class="fas fa-user-circle">-</i>Walid Regragui</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">Royal Moroccan Football Federation (FRMF)
-                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border border-primary rounded position-relative vesitable-item bg-white">
-                                        <div class="vesitable-img">
-                                            <img src="../public/images/img_home/lib/lightbox/images/Mali.png" class="img-fluid w-100 rounded-top" alt="">
-                                        </div>
-                                        <div class="p-4 rounded-bottom">
-                                            <h4>Morocco National Team</h4>
-                                            <p><i class="fas fa-user-circle">-</i>Walid Regragui</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">Royal Moroccan Football Federation (FRMF)
-                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border border-primary rounded position-relative vesitable-item bg-white">
-                                        <div class="vesitable-img">
-                                            <img src="../public/images/img_home/lib/lightbox/images/A.du sud.png" class="img-fluid w-100 rounded-top" alt="">
-                                        </div>
-                                        <div class="p-4 rounded-bottom">
-                                            <h4>Morocco National Team</h4>
-                                            <p><i class="fas fa-user-circle">-</i>Walid Regragui</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">Royal Moroccan Football Federation (FRMF)
-                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border border-primary rounded position-relative vesitable-item bg-white">
-                                        <div class="vesitable-img">
-                                            <img src="../public/images/img_home/lib/lightbox/images/stadium5jpg.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                        </div>
-                                        <div class="p-4 rounded-bottom">
-                                            <h4>Ahmad Bin Ali Stadium</h4>
-                                            <p><i class="fas fa-user-circle">-</i>Walid Regragui</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">Royal Moroccan Football Federation (FRMF)
-                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <?php } ?>
+                                     
                                 
                                 </div>
                             </div>
