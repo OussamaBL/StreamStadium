@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/header_footer.css">
+    <link rel="stylesheet" href="../public/css/styles_footer.css">
+    <link rel="stylesheet" href="../public/css/styles_header.css">
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="../public/fonts/icomoon/style.css">
@@ -44,8 +45,7 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <input type="submit" value="Register" class="btn px-5 btn-primary">
+                        <button type="submit" class="btn px-5 btn-primary" style="background-color: #FE7405;">login</button>
                     </form>
                 </div>
             </div>
@@ -60,5 +60,8 @@
 <script src="../js/popper.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/main.js"></script>
+
+<script src="../public/js/sandbox.js"></script>
+
 </body>
 </html>

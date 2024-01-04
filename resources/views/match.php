@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/header_footer.css">
+    <link rel="stylesheet" href="../public/css/styles_footer.css">
+    <link rel="stylesheet" href="../public/css/styles_header.css">
 
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/match.css">
@@ -49,10 +50,10 @@
 <!-- carts -->
 <div class="p-5 mb-3 m-5 text-black rounded" style="background-color: #FE7405;">
     <div class="">
-    <div class="row row-cols-4 row-cols-md-3 g-5 m-2">
+    <div class="row row-cols-3 row-cols-md-3 g-5 m-5">
     <div class="col">
         <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
+        <img src="../public/images/about_1.jpg" class="card-img-top"
             alt="Hollywood Sign on The Hill" />
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -65,7 +66,7 @@
     </div>
     <div class="col">
         <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
+        <img src="../public/images/about_1.jpg" class="card-img-top"
             alt="Palm Springs Road" />
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -75,7 +76,7 @@
     </div>
     <div class="col">
         <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
+        <img src="../public/images/about_1.jpg" class="card-img-top"
             alt="Los Angeles Skyscrapers" />
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -86,7 +87,7 @@
     </div>
     <div class="col">
         <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
+        <img src="../public/images/about_1.jpg" class="card-img-top"
             alt="Skyscrapers" />
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -97,116 +98,81 @@
         </div>
         </div>
     </div>
+    <div class="col">
+        <div class="card h-100">
+        <img src="../public/images/about_1.jpg" class="card-img-top"
+            alt="Skyscrapers" />
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+            This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+            </p>
+        </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+        <img src="../public/images/about_1.jpg" class="card-img-top"
+            alt="Skyscrapers" />
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+            This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+            </p>
+        </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+        <img src="../public/images/about_1.jpg" class="card-img-top"
+            alt="Skyscrapers" />
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+            This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+            </p>
+        </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+        <img src="../public/images/about_1.jpg" class="card-img-top"
+            alt="Skyscrapers" />
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+            This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+            </p>
+        </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+        <img src="../public/images/about_1.jpg" class="card-img-top"
+            alt="Skyscrapers" />
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+            This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+            </p>
+        </div>
+        </div>
+    </div>
+    
     </div>    
-    
-    <div class="row row-cols-1 row-cols-md-3 g-4 m-2">
-    <div class="col">
-        <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
-            alt="Hollywood Sign on The Hill" />
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-            This is a longer card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-            </p>
-        </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
-            alt="Palm Springs Road" />
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a short card.</p>
-        </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
-            alt="Los Angeles Skyscrapers" />
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-            additional content.</p>
-        </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
-            alt="Skyscrapers" />
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-            This is a longer card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-            </p>
-        </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    
-    <div class="row row-cols-1 row-cols-md-3 g-4 m-2">
-    <div class="col">
-        <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
-            alt="Hollywood Sign on The Hill" />
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-            This is a longer card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-            </p>
-        </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
-            alt="Palm Springs Road" />
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a short card.</p>
-        </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
-            alt="Los Angeles Skyscrapers" />
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-            additional content.</p>
-        </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-        <img src="images/about_1.jpg" class="card-img-top"
-            alt="Skyscrapers" />
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-            This is a longer card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-            </p>
-        </div>
-        </div>
-    </div>
-    </div>
-    </div>
-
 </div>
 <!-- end carts -->
 
 </section>
 
 <?php include "layouts/Footer.php" ?>
+
+<script src="../../public/js/sandbox.js"></script>
 
 </body>
 </html>

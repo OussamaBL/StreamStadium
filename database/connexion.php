@@ -9,7 +9,7 @@ class connexion
 {
     public static PDO|null $pdo = null;
     private string $ServerName="localhost";
-    private string $Name="mvc_proj";
+    private string $Name="StreamStadium";
     private string $UserName="root";
     private string $password="";
 
@@ -24,7 +24,7 @@ class connexion
         }
         catch (PDOException $e) {
             echo "Error adding user: " . $e->getMessage();
-            return false;
+            // return false;
         }
     }
 

@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <script src="../public/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../public/css/header_footer.css">
+    <link rel="stylesheet" href="../public/css/styles_footer.css">
+    <link rel="stylesheet" href="../public/css/styles_header.css">
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="../public/css/fonts/icomoon/style.css">
@@ -119,7 +120,7 @@
 
 <?php include "layouts/Footer.php" ?>
 
-
+<script src="../../public/js/sandbox.js"></script>
 
 </body>
 </html>

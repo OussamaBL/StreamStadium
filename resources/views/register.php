@@ -7,12 +7,10 @@
 
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <script src="../public/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../public/css/header_footer.css">
+    <link rel="stylesheet" href="../public/css/styles_footer.css">
+    <link rel="stylesheet" href="../public/css/styles_header.css">
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="../public/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="../public/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/register.css">
 
     <title><?= $title ?></title>
@@ -73,7 +71,7 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="submit" value="Register" class="btn px-5 btn-primary">
+                        <input type="submit" value="Register" class="btn px-5 btn-primary" style="background-color: #FE7405;">
                     </form>
                 </div>
             </div>
@@ -87,6 +85,8 @@
 <script src="../public/js/popper.min.js"></script>
 <script src="../public/js/bootstrap.min.js"></script>
 <script src="../public/js/main.js"></script>
+
+<script src="../../public/js/sandbox.js"></script>
 
 </body>
 </html>
