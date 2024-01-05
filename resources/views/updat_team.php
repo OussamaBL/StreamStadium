@@ -476,6 +476,15 @@
                                             <li class="list-inline-item active">
                                                 <a href="#">Home</a>
                                             </li>
+                                            <li class="list-inline-item active">
+                                                <a href="/streamstadium/user/user">Users</a>
+                                            </li>
+                                            <li class="list-inline-item active">
+                                                <a href="/streamstadium/team/team">Teams</a>
+                                            </li>
+                                            <li class="list-inline-item active">
+                                                <a href="/streamstadium/stadium/stade">Stadiums</a>
+                                            </li>
                                             <li class="list-inline-item seprate">
                                                 <span>/</span>
                                             </li>
@@ -483,7 +492,6 @@
                                         </ul>
                                     </div>
                                     <!-- button to add -->
-                                    
                                 </div>
                             </div>
                         </div>
@@ -514,7 +522,7 @@
 </section>
 
 <section>
-    <div class="section__content section__content--p30">
+    <div class="section__content section__content--p20">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xl-12">
@@ -522,13 +530,13 @@
                                 <div class="user-data m-b-40">
                                     <h3 class="title-3 m-b-30">
                                         
-<?php
+        <?php
 ob_start();
 ?>
-                                    <div class="table-responsive table-data">
+                                <div class="table-responsive table-data">
       <?php $team=$result; ?>
-      <form action="" method="POST">
-      <div class="modal-body">
+      <form action="/streamstadium/team/update/<?= $team->id ?>" method="POST" enctype="multipart/form-data" >
+            <div class="modal-body">
                                 <div class="mask d-flex align-items-center h-100 gradient-custom-3">
                                         <div class="container h-100">
                                         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -567,10 +575,10 @@ ob_start();
                                                         <input type="text" id="federation" name="federation" class="form-control form-control-lg" value="<?= $team->federation; ?>">
                                                     </div>
 
-                                                    <div class="form-outline mb-2">
+                                                    <!-- <div class="form-outline mb-2">
                                                         <label class="form-label" for="form3Example1cg">Image</label>
                                                         <input type="file" name="image" class="form-control form-control-lg" value="<?= $team->image; ?>">
-                                                    </div>
+                                                    </div> -->
                                                     
                                     <!-- end form to add user -->
                                                 </div>
@@ -581,15 +589,11 @@ ob_start();
                                 </div>
                     </div>
                     <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" name="btn_submit" id="btn_submit" class="btn btn-success">Register</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" name="btn_submit" id="btn_submit" class="btn btn-success">Register</button>
                     </div>
         </form>
-        
         </div>
-                                    <div class="user-data__footer">
-                                        <button class="au-btn au-btn-load">load more</button>
-                                    </div>
                                 </div>
                                 <!-- END USER DATA-->
                             </div>

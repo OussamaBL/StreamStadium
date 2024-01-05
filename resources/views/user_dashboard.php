@@ -318,11 +318,11 @@
                         <h4 class="name">john doe</h4>
                         <a href="#">Sign out</a>
                     </div>
-                    <!-- <nav class="navbar-sidebar2">
+                    <nav class="navbar-sidebar2">
                         <ul class="list-unstyled navbar__list">
                             <li class="active has-sub">
-                                <a class="js-arrow" href="#">
-                                    <i class="fas fa-tachometer-alt"></i>Dashboard
+                                <a class="js-arrow" href="/streamstadium/user/user">
+                                    <i class="fas fa-tachometer-alt"></i>Users
                                     <span class="arrow">
                                         <i class="fas fa-angle-down"></i>
                                     </span>
@@ -346,14 +346,14 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li> -->
+                            <li>
                                 <a href="inbox.html">
                                     <i class="fas fa-chart-bar"></i>Inbox</a>
                                 <span class="inbox-num">3</span>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="fas fa-shopping-basket"></i>eCommerce</a>
+                                <a href="/streamstadium/Stadium/stade">
+                                    <i class="fas fa-shopping-basket"></i>Stadiums</a>
                             </li>
                             <li class="has-sub">
                                 <a class="js-arrow" href="#">
@@ -476,6 +476,15 @@
                                             <li class="list-inline-item active">
                                                 <a href="#">Home</a>
                                             </li>
+                                            <li class="list-inline-item active">
+                                                <a href="/streamstadium/user/user">Users</a>
+                                            </li>
+                                            <li class="list-inline-item active">
+                                                <a href="/streamstadium/team/team">Teams</a>
+                                            </li>
+                                            <li class="list-inline-item active">
+                                                <a href="/streamstadium/stadium/stade">Stadiums</a>
+                                            </li>
                                             <li class="list-inline-item seprate">
                                                 <span>/</span>
                                             </li>
@@ -514,7 +523,7 @@
                                                 
                                                 <div class="form-outline mb-2">
                                                         <label class="form-label" for="formName">Your Name</label>
-                                                        <input type="text" id="name" name="full_name" class="form-control form-control-lg">
+                                                        <input type="text" id="full_name" name="full_name" class="form-control form-control-lg">
                                                     </div>
 
                                                     <div class="form-outline mb-2">

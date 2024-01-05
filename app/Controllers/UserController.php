@@ -18,7 +18,7 @@ class UserController extends Controller
     function add(): void
     {
         $user = new User($_POST['full_name'],$_POST['email'],$_POST["age"],$_POST['phone'],$_POST['cin'],$_POST['password'],$_POST['role']); 
-        // $user -> add_user();
+        $user -> add_user();
         header('Location: /streamstadium/User/user');
     
     }

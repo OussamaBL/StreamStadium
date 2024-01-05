@@ -90,9 +90,6 @@ class Team extends CrudAlias
     {
         $this->federation = $federation;
     }
-    public function edit():void{
-        $this->update('teams',$this->id,['name'=>$this->name,'coach'=>$this->coach,'image'=>$this->image ,'groupe'=>$this->groupe,'cups'=>$this->cups,'federation'=>$this->federation,'description'=>$this->description,'image'=>$this->image]);
-    }
     public function destroy():void
     {
         $this->delete('teams', $this->id);
@@ -108,6 +105,9 @@ class Team extends CrudAlias
     public function showAllTeams(): array
     {
         return $this->selectAll('teams');
+    }
+    public function edit():void{
+        $this->update('teams',$this->id,['name'=>$this->name,'coach'=>$this->coach,'image'=>$this->image ,'groupe'=>$this->groupe,'cups'=>$this->cups,'federation'=>$this->federation,'description'=>$this->description,'image'=>$this->image]);
     }
 }
 

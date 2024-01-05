@@ -55,18 +55,18 @@ class TeamController extends Controller
         $teams=$team->showAllTeams();
         $this->render("views","team_dashboard","liste des equipes",$teams);
     }
-    function update(int $id): void
-    {
-        $team=new Team($_POST['name'],$_POST['coach'],$_POST['description'],$_POST['groupe'],$_POST['cups'],$id);
-        $team->edit();
-        $teams=new Team;
-        header('Location: /streamstadium/Team/team');
-    }
-    public function edit(int $id):void
+    public function edit($id):void
     {
         $t=new Team();
         $t->setId($id);
         $team = $t->show();
         $this->render("views","updat_team","update des equipes",$team);
+    }
+    function update($id): void
+    {
+        $team=new Team($_POST['name'],$_POST['coach'],$_POST['description'],$_POST['groupe'],$_POST['cups'],$_POST['federation'],"",$id);
+        $team->edit();
+        $teams=new Team;
+        header('Location: /streamstadium/Team/team');
     }
 }

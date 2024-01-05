@@ -14,8 +14,7 @@ class User extends CrudAlias
     private string $password;
 
 
-    public function __construct(string $full_name="null", string $email="null", 
-    int $age=0,string $phone="null",string $cin="null",string $password="null",string $role="null",int $id=0)
+    public function __construct(string $full_name="", string $email="",int $age=0,string $phone="",string $cin="",string $password="",string $role="",int $id=0)
     {
         parent::__construct();
         $this->full_name = $full_name;
@@ -97,6 +96,10 @@ class User extends CrudAlias
     public function edit():void{
         $this->update('users', $this->id, ['name' => $this->full_name ,'age'=> $this->age,'email'=> $this->email,
         'cin'=> $this->cin,'phone'=> $this->phone,'role'=> $this->role,'password'=> $this->password]);
+    }
+    public function add_user(): void
+    {
+        $this->id = $this->insert('users',['full_name'=>$this->full_name,'age'=>$this->age,'email'=>$this->email ,'cin'=>$this->cin,'phone'=>$this->phone,'role'=>$this->role,'password'=>$this->password]); 
     }
 
     public function destroy():void{

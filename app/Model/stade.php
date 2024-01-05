@@ -11,8 +11,7 @@ class Stade extends CrudAlias
     private string $adress;
     private int $capacity;
     private string $image;
-    public function __construct(string $name="", string $city="", 
-    string $adress="", int $capacity=0, string $image="",int $id=0)
+    public function __construct(string $name="", string $city="",string $adress="", int $capacity=0, string $image="",int $id=0)
     {
         parent::__construct();
         $this->id = $id;
@@ -79,14 +78,13 @@ public function destroy():void
 {
     $this->delete('stades', $this->id);
 }
-public function add(): void
+public function add_stade(): void
 {
-    $this->id = $this->insert('stades', ['name'=>$this->name,'city'=>$this->city,
-    'adress'=>$this->adress ,'capacity'=>$this->capacity,'image'=>$this->image]); 
+    $this->id = $this->insert('stades', ['name'=>$this->name,'city'=>$this->city,'adress'=>$this->adress ,'capacity'=>$this->capacity,'image'=>$this->image]); 
 }
-public function show(): void
+public function show(): object
 {
-    $teams= $this->select('stades', $this->id);
+    return $this->select('stades', $this->id);
 }
 public function showAllStade(): array
     {

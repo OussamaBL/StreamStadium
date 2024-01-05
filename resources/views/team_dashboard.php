@@ -476,6 +476,15 @@
                                             <li class="list-inline-item active">
                                                 <a href="#">Home</a>
                                             </li>
+                                            <li class="list-inline-item active">
+                                                <a href="/streamstadium/user/user">Users</a>
+                                            </li>
+                                            <li class="list-inline-item active">
+                                                <a href="/streamstadium/team/team">Teams</a>
+                                            </li>
+                                            <li class="list-inline-item active">
+                                                <a href="/streamstadium/stadium/stade">Stadiums</a>
+                                            </li>
                                             <li class="list-inline-item seprate">
                                                 <span>/</span>
                                             </li>
@@ -511,7 +520,6 @@
                                             <div class="card" style="border-radius: 15px;">
                                                 <div class="card-body p-2">
                                     <!-- form to add user -->
-                                                
                                                     <div class="form-outline mb-2">
                                                         <label class="form-label" for="formName">Team Name</label>
                                                         <input type="text" id="name" name="name" class="form-control form-control-lg">
@@ -556,8 +564,8 @@
                                 </div>
                     </div>
                     <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" name="btn_submit" id="btn_submit" class="btn btn-success">Register</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" name="btn_submit" id="btn_submit" class="btn btn-success">Register</button>
                     </div>
                 </form>
             </div>
@@ -574,7 +582,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xl-8">
-                                <!-- RECENT REPORT 2-->
+                                <!-- RECENT REPORT 2-->     
                                 
                                 <!-- END RECENT REPORT 2             -->
                             </div>

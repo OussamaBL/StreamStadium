@@ -492,9 +492,6 @@
                                         </ul>
                                     </div>
                                     <!-- button to add -->
-                                    <button type="button" class="btn btn-primary p-6" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    add stade
-                                     </button>
                                 </div>
                             </div>
                         </div>
@@ -502,69 +499,7 @@
                 </div>
 </section>
             <!-- END BREADCRUMB-->
-<section>
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <!--add user model -->
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Create stade</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form action="/streamstadium/stadium/add/" method="POST" enctype="multipart/form-data">
-                    <div class="modal-body">
-                                <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-                                        <div class="container h-100">
-                                        <div class="row d-flex justify-content-center align-items-center h-100">
-                                            <div class="col-12 col-md-9 col-lg-7 col-xl-12">
-                                            <div class="card" style="border-radius: 15px;">
-                                                <div class="card-body p-2">
-                                    <!-- form to add user -->
-                                                
-                                                    <div class="form-outline mb-2">
-                                                        <label class="form-label" for="formName">stade name</label>
-                                                        <input type="text" id="name" name="name" class="form-control form-control-lg">
-                                                    </div>
 
-                                                    <div class="form-outline mb-2">
-                                                        <label class="form-label" for="form3Example1cg">city</label>
-                                                        <input type="text" id="city" name="city" class="form-control form-control-lg">
-                                                    </div>
-
-                                                    <div class="form-outline mb-2">
-                                                        <label class="form-label" for="form3Example1cg">adress</label>
-                                                        <input type="text" id="adress" name="adress" class="form-control form-control-lg">
-                                                    </div>
-
-                                                    <div class="form-outline mb-2">
-                                                        <label class="form-label" for="form3Example1cg">capacity</label>
-                                                        <input type="text" id="capacity" name="capacity" class="form-control form-control-lg">
-                                                    </div>
-
-
-                                                    <div class="form-outline mb-2">
-                                                        <label class="form-label" for="form3Example1cg">Image</label>
-                                                        <input type="file" name="image" class="form-control form-control-lg">
-                                                    </div>
-                                                    
-                                    <!-- end form to add user -->
-                                                </div>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" name="btn_submit" id="btn_submit" class="btn btn-success">Register</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!--modify user model -->
-    </div>
-</section>
             <!-- STATISTIC-->
 <section class="statistic">
 </section>
@@ -587,52 +522,69 @@
 </section>
 
 <section>
-    <div class="section__content section__content--p30">
+    <div class="section__content section__content--p20">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xl-12">
                                 <!-- USER DATA-->
                                 <div class="user-data m-b-40">
                                     <h3 class="title-3 m-b-30">
-                                        <i class="zmdi zmdi-account-calendar"></i>stade data</h3>
-<?php
+                                        
+                                    <?php
 ob_start();
 ?>
-                                    <div class="table-responsive table-data">
-                                    
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <td>stade name</td>
-                                                    <td>city</td>
-                                                    <td>adress</td>
-                                                    <td>capacity</td>
-                                                    <td>image</td>
-                                                    <td></td>
-                                                </tr>
-        <tbody>
-            <?php if (!empty($result)) :?>
-            <?php foreach ($result as $stades):?>
-                <tr>
-                    <td><?= $stades->name; ?></td>
-                    <td><?= $stades->city; ?></td>
-                    <td><?= $stades->adress; ?></td>
-                    <td><?= $stades->capacity; ?></td>
-                    <td><?= $stades->image; ?></td>
-                <td>
-                    <a href="/streamstadium/Stadium/edit/<?= $stades->id ?>" class="btn btn-success">Modifier</a>
-                    <a href="/streamstadium/Stadium/destroy/<?= $stades->id ?>" onclick="return confirm('Do you want to Delete these team ?');" class="btn btn-danger">Supprimer</a>
-                </td>
-                </tr>
-                <?php endforeach; ?>
-                <?php endif; ?>
-                </tbody>
-    </table>
+                                <div class="table-responsive table-data">
+      <?php $team=$result; ?>
+      <form action="/streamstadium/stade/updat/<?= $stades->id ?>" method="POST" enctype="multipart/form-data">
+            <div class="modal-body">
+                                <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+                                        <div class="container h-100">
+                                        <div class="row d-flex justify-content-center align-items-center h-100">
+                                            <div class="col-12 col-md-9 col-lg-7 col-xl-12">
+                                            <div class="card" style="border-radius: 15px;">
+                                                <div class="card-body p-2">
+                                    <!-- form to add user -->
 
-                                    </div>
-                                    <div class="user-data__footer">
-                                        <button class="au-btn au-btn-load">load more</button>
-                                    </div>
+                                                    <div class="form-outline mb-2">
+                                                        <label class="form-label" for="formName">stade name</label>
+                                                        <input type="text" id="name" name="name" class="form-control form-control-lg" value="<?= $stades->name; ?>">
+                                                    </div>
+
+                                                    <div class="form-outline mb-2">
+                                                        <label class="form-label" for="form3Example1cg">city</label>
+                                                        <input type="text" id="city" name="city" class="form-control form-control-lg" value="<?= $stades->city; ?>">
+                                                    </div>
+
+                                                    <div class="form-outline mb-2">
+                                                        <label class="form-label" for="form3Example1cg">adress</label>
+                                                        <input type="text" id="adress" name="adress" class="form-control form-control-lg" value="<?= $stades->adress; ?>">
+                                                    </div>
+
+                                                    <div class="form-outline mb-2">
+                                                        <label class="form-label" for="form3Example1cg">capacity</label>
+                                                        <input type="text" id="capacity" name="capacity" class="form-control form-control-lg" value="<?= $stades->capacity; ?>">
+                                                    </div>
+
+                                                    <!-- <div class="form-outline mb-2">
+                                                        <label class="form-label" for="form3Example1cg">Image</label>
+                                                        <input type="file" name="image" class="form-control form-control-lg" value="<?= $stades->image; ?>">
+                                                    </div> -->
+                                                    
+                                    <!-- end form to add user -->
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" name="btn_submit" id="btn_submit" class="btn btn-success">Register</button>
+                    </div>
+        </form>
+        
+        </div>
                                 </div>
                                 <!-- END USER DATA-->
                             </div>
@@ -643,7 +595,7 @@ ob_start();
                     </div>
                 </div>
             </section>
-
+            
             <section>
                 <div class="container-fluid">
                     <div class="row">
